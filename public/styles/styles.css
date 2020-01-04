@@ -1,50 +1,52 @@
-body{
-  font-size:25px;
+body {
+  font-size: 25px;
 }
-.header-flexgrow1{
-  display:flex;
-  flex-grow:1;
+.header-flexgrow1 {
+  display: flex;
+  flex-grow: 1;
   justify-content: flex-end;
   align-items: center;
 }
-.header-flexgrow2{
-  display:flex;
-  flex-grow:2;
+.header-flexgrow2 {
+  display: flex;
+  flex-grow: 2;
   justify-content: center;
 }
-.nav-bar{
-  display:flex;
-  background-color:black;
-  color:whitesmoke;
-  margin-top:10px;
-  margin-bottom:10px;
-  width:960px;
-  margin-left:auto;
-  margin-right:auto;
+.nav-bar {
+  display: flex;
+  background-color: black;
+  color: whitesmoke;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: flex-start;
 }
-.dropdown a{
+.dropdown a {
   text-decoration: none;
-  color:white;
+  color: white;
 }
 .dropdown {
-  font-size:20px;
-  padding:20px 15px 20px 15px;
+  font-size: 20px;
+  padding: 20px 15px 20px 15px;
 }
 
-.dropdown:hover{
-  cursor:pointer;
-  background-color:orange;
+.dropdown:hover {
+  cursor: pointer;
+  background-color: orange;
 }
-#login,#signup{
-  padding:0px 0px 0px 0px;
-  margin-right:20px;
-  margin-left:20px;
-  font-size:25px;
+#login,
+#signup {
+  padding: 0px 0px 0px 0px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 25px;
 }
-#login:hover,#signup:hover{
-  cursor:pointer;
-  border-bottom:1px solid white;
+#login:hover,
+#signup:hover {
+  cursor: pointer;
+  border-bottom: 1px solid white;
 }
 
 /* .jumbo-container{
@@ -59,7 +61,7 @@ body{
   height: 700px;
 } */
 
-.jumbo-login-row{
+.jumbo-login-row {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
@@ -80,39 +82,41 @@ body{
   flex-direction: column;
 } */
 
-
 /* -------------------MODAL ------------------ */
-.login-modal, .signup-modal{
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+.login-modal,
+.signup-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.modal-content{
+.modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%; 
+  width: 50%;
 }
-.modal-login-box, .modal-signup-box{
+.modal-login-box,
+.modal-signup-box {
   text-align: center;
   background-color: #b30303;
   border-radius: 10px;
 }
-.close{
-  font-size:50px;
+.close {
+  font-size: 50px;
 }
-.close:hover{
-  cursor:pointer;
+.close:hover {
+  cursor: pointer;
 }
-#pw,#username{
+#pw,
+#username {
   font-size: 25px;
   height: 50px;
   width: 50px;
@@ -123,7 +127,7 @@ body{
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 100%;
   height: 550px;
   background-color: white;
@@ -136,7 +140,6 @@ body{
   margin-right: auto;
   display: flex;
 }
-
 
 .box2 {
   display: flex;
@@ -159,23 +162,26 @@ body{
 
 .display-li {
   font-size: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   text-align: center;
   color: white;
 }
 
 .box2:hover {
-  cursor:pointer;
+  cursor: pointer;
   background-color: rgb(8, 8, 139);
   color: white;
 }
-.box1:hover{
-  cursor:pointer;
+.box1:hover {
+  cursor: pointer;
 }
-#manage-money-box,#buy-home-box,#buy-car-box,#invest-box{
-  display:none;
+#manage-money-box,
+#buy-home-box,
+#buy-car-box,
+#invest-box {
+  display: none;
 }
-
 
 .container2-content {
   display: flex;
@@ -192,12 +198,12 @@ body{
 #buy-home-box,
 #buy-car-box,
 #invest-box {
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 1100px;
 }
 
-.card-info, 
+.card-info,
 .money-info,
 .home-info,
 .car-info,
@@ -215,7 +221,7 @@ body{
   color: rgb(8, 8, 139);
 }
 
-.card-text, 
+.card-text,
 .money-text,
 .home-text,
 .car-text,
@@ -225,7 +231,7 @@ body{
   float: left;
 }
 
-.card-img-box, 
+.card-img-box,
 .money-img-box,
 .home-img-box,
 .car-img-box,
@@ -237,7 +243,7 @@ body{
   margin-right: auto;
 }
 
-.info-box, 
+.info-box,
 .money-box,
 .home-box,
 .car-box,
@@ -291,7 +297,7 @@ body{
   border-radius: 120px;
   margin-top: -130px;
   margin-left: 100px;
-} 
+}
 
 .money-bank-logo {
   margin-left: 21px;
@@ -324,7 +330,7 @@ body{
   background-image: url("../images/download.png");
   margin-top: -100px;
   margin-left: 100px;
-} 
+}
 
 .home-logo {
   display: flex;
@@ -353,7 +359,7 @@ body{
   background-image: url("../images/images.png");
   margin-top: 10px;
   margin-left: 30px;
-} 
+}
 
 .car-logo {
   display: flex;
@@ -449,105 +455,119 @@ hr {
 }
 
 /* -------- Dashboard ------ */
-.dashboard-container{
-  background-color:gray;
-  display:flex;
-  width:100%;
+.dashboard-container {
+  background: url("https://www.advantiscu.org/assets/content/1F8Gj57i/advantis_tab_mobile_desk.jpg")
+    center no-repeat;
+  background-color: black;
+
+  display: flex;
+  width: 100%;
   padding: 20px 10px 20px 10px;
-  margin-left:auto;
-  margin-right:auto;
-  justify-content:center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
-.dash-nav-container{
-  background-color:#08088b;
-  width:100%;
-  height:100px;
-  display:flex;
+.dash-nav-container {
+  background-color: #ff0000;
+  width: 100%;
+  height: 100px;
+  display: flex;
   align-items: center;
 }
-.dashboard-nav{
-  font-size:25px;
-  color:white;
-  display:flex;
-  width:960px;
-  justify-content:flex-end;
+.dashboard-nav {
+  font-size: 25px;
+  color: white;
+  display: flex;
+  width: 960px;
+  justify-content: flex-end;
   align-items: center;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-.dashboard-nav div{
+.dashboard-nav div {
   border-right: 1px solid white;
-  padding-right:15px;
-  margin-right:15px;
+  padding-right: 15px;
+  margin-right: 15px;
 }
-.dash-username{
+.dash-username {
 }
-.dash-signout a{
+.dash-signout a {
   text-decoration: none;
-  color:white;
+  color: white;
   cursor: pointer;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 22px;
 }
-.dash-signout a:hover{
-  border-bottom:1px solid white;
+.dash-signout a:hover {
+  border-bottom: 1px solid white;
 }
-.account-container{
-  background-color:white;  
-  height:500px;
-  display:flex;
+.account-container {
+  background-color: white;
+  height: 500px;
+  display: flex;
   flex-direction: column;
-  width:800px;
+  width: 800px;
 }
-.fname{
+/*----- ----*/
+.fname {
   text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #ff0202;
+  color: white;
 }
-.balance{
-  padding:15px 0px 15px 0px;
-  display:flex;
+.balance,
+p {
+  font-size: 20px;
+  padding: 15px 0px 15px 0px;
+  display: flex;
   justify-content: space-evenly;
 }
 /*--------------SIDE DASHBOARD PANEL ----------*/
-.send-money,.loans,.update-account,.deposit{
-  display:none;
+.send-money,
+.loans,
+.update-account,
+.deposit {
+  display: none;
 }
-.side-nav-bar{
-  padding:10px 10px 10px 10px;
-  display:flex;
+.side-nav-bar {
+  padding: 10px 10px 10px 10px;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color:#08088b;
-  color:white;
+  background-color: #08088b;
+  color: white;
 }
-.side-nav-bar a{
+.side-nav-bar a {
   cursor: pointer;
-  padding:10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   text-decoration: none;
-  color:white;
+  color: white;
 }
 /*------MODAL SEND MONEY ---- */
-.send-money-modal{
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+.send-money-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.modal-content{
+.modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%; 
+  width: 50%;
 }
-.modal-send-money-box{
+.modal-send-money-box {
   text-align: center;
 }
 .header-section {
-  height:100px;
+  height: 100px;
   display: flex;
   background-color: red;
   width: 100%;
@@ -559,12 +579,12 @@ hr {
 
 .eagle {
   display: inline-block;
-  height:50px;
+  height: 50px;
 }
 
 #main-title-container {
   margin: auto;
-  width:100%;
+  width: 100%;
 }
 .nav-bar {
   display: flex;
@@ -748,14 +768,16 @@ footer a {
   font-style: italic;
 }
 
-.account-container{
-  background-color:white;  
-  height:500px;
-  display:flex;
+.account-container {
+  background-color: white;
+  height: 500px;
+  display: flex;
   flex-direction: column;
-  width:800px;
+  width: 800px;
 }
 
-.edit-info, #save-changes, #cancel-editing{
+.edit-info,
+#save-changes,
+#cancel-editing {
   display: none;
 }
