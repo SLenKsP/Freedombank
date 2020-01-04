@@ -1,0 +1,15 @@
+{{#if user}}
+    <h1>Deposit Money</h1>
+    <div class='balance'>
+        <h1>Account Number: {{user.account_number}}</h1>
+        <p>Balance: {{user.current_balance}}</p>
+    </div>
+    <div class='deposit-money-form'>
+        <form action='api/deposit' method='POST'>
+            <div>
+                <label>Deposit Amount</label>
+                <input id='deposit-input' name='deposit'>
+            </div>
+            <div></div>
+        </form>
+    </div>

@@ -61,24 +61,6 @@ module.exports = app => {
           res.redirect('/dashboard')
         )
       })
-
-      //
-      // })
-      // db.transactions.create({
-      //   account_id: req.user,
-      //   transaction_type: req.body.transaction_type,
-      //   comment: req.body.comment,
-      //   amount: req.body.amount
-      // }).then((result) => {
-      //   res.json(result);
-      //   db.Account.update({
-      //     current_balance: result.updated_balance
-      //   }, {
-      //       where: {
-      //       user_id: req.params.id
-      //     }
-      //   })
-      // })
     })
     //logs you out
     app.get(`/logout`, (req, res) => {
