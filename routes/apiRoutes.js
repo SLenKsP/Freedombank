@@ -25,34 +25,44 @@ module.exports = app => {
     })
     //sends money to another account
     app.post('/api/sendmoney',function(req,res){
-      let updatedValues;
-      //person recieving the payment(sent money)
+      //person receiving the payment(sent money)
       db.Account.findOne({
         where: {
           email: req.body.receiving_email
         },
       }).then(function(data){
-        transactionData = {
-          id: data.id,
+        let transactionData = {
+          account_id: data.id,
+          transaction_type: 'Wire-Transfer',
           comment: req.body.comment,
           amount: req.body.amount
-          // updated
         }
-        console.log('-----')
-        console.log(data.current_balance)
-        console.log(req.body)
-       updatedValues = {current_balance: (parseInt(data.current_balance) + parseInt(req.body.amount))}
+        let updatedValues = {current_balance: (parseInt(data.current_balance) + parseInt(req.body.amount))}
         let location = {where:{id:data.id}}
-        console.log('target id ' + data.id)
-        console.log("new value will be "+ JSON.stringify(updatedValues))
-        db.Account.update(updatedValues,location)
-          .then(function(data){
-          console.log(data)
-        })
-        // db.transactions.create(transactionData).then(function(data){
-        //   console.log('craeted transaction')
-        // })
+        db.Account.update(updatedValues,location).then()
+        db.transactions.create(transactionData).then()
       })
+      //person sending the money
+      db.Account.findOne({
+        where:{
+          UserId:req.user
+        }
+      }).then(function(data){
+        let transactionData = {
+          account_id: data.id,
+          transaction_type: 'Wire-Transfer',
+          comment: req.body.comment,
+          amount: (parseInt(req.body.amount) * -1) 
+        }
+        let updatedValues = {current_balance: (parseInt(data.current_balance) - parseInt(req.body.amount))}
+        let location = {where: {UserId: req.user}}
+        db.Account.update(updatedValues,location).then()
+        db.transactions.create(transactionData).then(
+          res.redirect('/dashboard')
+        )
+      })
+
+      //
       // })
       // db.transactions.create({
       //   account_id: req.user,
