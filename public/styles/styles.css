@@ -23,6 +23,13 @@ body{
   margin-right:auto;
   justify-content: flex-start;
 }
+.dash-header{
+  font-size:30px;
+  text-align:center;
+  border-bottom: 1px solid black;
+  padding-top:10px;
+  padding-bottom:10px;
+}
 .dropdown a{
   text-decoration: none;
   color:white;
@@ -82,7 +89,7 @@ body{
 
 
 /* -------------------MODAL ------------------ */
-.login-modal, .signup-modal{
+.login-modal, .signup-modal, .send-money-modal{
   display: none; 
   position: fixed; 
   padding-top: 300px;
@@ -100,6 +107,30 @@ body{
   float: right;
   font-size: 28px;
   font-weight: bold;
+}
+.balance{
+  font-size:25px;
+  border-bottom:1px solid black;
+}
+.deposit-money-form{
+  padding-top:10px;
+  text-align:center;
+}
+#deposit-input{
+  width:200px;
+}
+#deposit-button, #send-money-button{
+  cursor: pointer;
+  margin-top:10px;
+  padding-top:10px;
+  padding-bottom:10px;
+  width:150px;
+  background-color:#0275d8;
+  color:white;
+  border:none;
+}
+.send-money-form{
+  text-align:center;
 }
 #username,#pw{
   font-size:25px;
@@ -238,7 +269,7 @@ body{
 .car-text,
 .invest-text {
   color: rgb(8, 8, 139);
-  width: 50%;
+  width: 60%;
   float: left;
 }
 
@@ -250,22 +281,25 @@ body{
   display: flex;
   height: 350px;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info-box, 
 .money-box,
 .home-box,
-.car-box {
+.car-box,
+.invest-box {
   display: flex;
+  display: inline-block;
   font-size: 30px;
   font-style: italic;
   height: 100px;
-  width: 100%;
-  margin-top: 25px;
+  width: 500px;
+  margin-top: 65px;
 }
 
 .card-img {
-  background-repeat: no-repeat;
   display: flex;
   height: 225px;
   width: 225px;
@@ -273,15 +307,16 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 45, 3);
   background-image: url("../images/images.jpg");
-  margin-top: -70px;
-  margin-left: 200px;
+  background-repeat:no-repeat;
+  margin-top: -100px;
+  margin-left: 100px;
 }
 
 .card-logo {
   display: flex;
   height: 19px;
   width: 19px;
-  margin: 118px 83px 78px 38px;
+  margin: 116px 83px 80px 38px;
   border-radius: 5px;
   background-image: url("../images/d20f0c2a-adf1-458c-94bb-df772ae0cfce_19x19.jpg");
   border: 2px solid rgb(184, 45, 3);
@@ -290,35 +325,33 @@ body{
 .freedom-bank-logo {
   display: flex;
   font-size: 19px;
-  margin-top: -5px;
-  padding-left: 18px;
+  padding-left: 22px;
   color: white;
 }
 
 .money-img {
   display: flex;
   height: 250px;
-  width: 350px;
+  width: 250px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 45, 3);
   background-image: url("../images/images-1.jpg");
-  border-radius: 50px;
-  margin-top: -190px;
+  border-radius: 120px;
+  margin-top: -130px;
   margin-left: 100px;
 } 
 
 .money-bank-logo {
-  margin-top: -7px;
-  margin-left: 18px;
+  margin-left: 21px;
 }
 
 .money-logo {
   display: flex;
   height: 19px;
   width: 19px;
-  margin-top: 210px;
-  margin-left: 50px;
+  margin-top: 200px;
+  margin-left: 60px;
   border-radius: 5px;
   background-image: url("../images/d20f0c2a-adf1-458c-94bb-df772ae0cfce_19x19.jpg");
   border: 2px solid rgb(184, 45, 3);
@@ -327,8 +360,7 @@ body{
 
 /* buy a home styling */
 .home-bank-logo {
-  margin-left: 16px;
-  margin-top: -7px;
+  margin-left: 21px;
 }
 
 .home-img {
@@ -339,7 +371,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 45, 3);
   background-image: url("../images/download.png");
-  margin-top: -115px;
+  margin-top: -100px;
   margin-left: 100px;
 } 
 
@@ -357,8 +389,7 @@ body{
 
 /* Buy a car styling */
 .car-bank-logo {
-  margin-top: -7px;
-  margin-left: 16px;
+  margin-left: 21px;
 }
 
 .car-img {
@@ -386,27 +417,21 @@ body{
 }
 
 /* invest styling */
+.invest-bank-logo {
+  margin-left: 21px;
+}
 
 .invest-img {
   display: flex;
-  height: 300px;
+  height: 280px;
   width: 350px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 45, 3);
   background-image: url("../images/1_400x350.jpg");
-  margin-top: -210px;
-  margin-left: 50px;
+  margin-top: -160px;
+  margin-left: 100px;
   border-radius: 15px;
-}
-
-.invest-box {
-  display: flex;
-  font-size: 30px;
-  font-style: italic;
-  height: 100px;
-  width: 100%;
-  margin-top: 50px;
 }
 /*----------Footer styling ------------*/
 
@@ -531,10 +556,17 @@ hr {
   color:white;
 }
 .side-nav-bar a{
+  width:100%;
+  margin-left:0;
+  margin-right:0;
   cursor: pointer;
   padding:10px 0px 10px 0px;
   text-decoration: none;
   color:white;
+  border: 1px solid #08088b;
+}
+.side-nav-bar a:hover{
+  border-bottom: 1px solid white;
 }
 /*------MODAL SEND MONEY ---- */
 .send-money-modal{
@@ -666,13 +698,28 @@ li :hover ul li {
   top: 50%;
   transform: translateY(-50%);
 }
-
+.edit-info,.account-info{
+  text-align:center;
+  font-size:20px;
+}
+.account-edit-button{
+  margin-left:auto;
+  margin-right:auto;
+}
 .carousel-caption h1 {
   font-size: 500%;
   text-transform: uppercase;
   text-shadow: 1px 1px 15px #000;
 }
-
+#cancel-money, #send-money-confirm,.account-edit-button,#save-changes,#cancel-editing{
+  margin-top:10px;
+  background-color: #0275d8;
+  cursor:pointer;
+  border:none;
+  margin-bottom:15px;
+  color:white;
+  padding: 10px 15px 10px 15px;
+}
 .carousel-caption h3 {
   font-size: 200%;
   font-weight: 500;

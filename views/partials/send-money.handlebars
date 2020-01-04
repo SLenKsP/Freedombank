@@ -1,21 +1,21 @@
     {{#if user}}
-        <h1>Send Money</h1>
+        <h1 class='dash-header'>Send Money</h1>
         <div class='balance'>
-            <h1>Account Number: {{user.account_number}}</h1>
+            <p>Account Number: {{user.account_number}}</p>
             <p>Balance: {{user.current_balance}}</p>
         </div>
         <div class='send-money-form'>
             <form action='/api/sendmoney' method='POST'>
                 <div>
-                    <label>Receiving Email Address</label>
+                    <label>Receiving Email Address</label><br>
                     <input id='send-email-input' name='receiving_email'>
                 </div>
                 <div>
-                    <label>Amount</label>
+                    <label>Amount</label><br>
                     <input id='send-money-input' name='amount'>
                 </div>
                 <div>
-                    <label>Comment</label>
+                    <label>Comment</label><br>
                     <input type='text' id='send-money-text'name='comment'>
                 </div>
                 <button id='send-money-button' type='button'>Send Money</button>

@@ -5,9 +5,6 @@ const passport = require('passport')
   module.exports = app => {
     //home page
     app.get("/", function(req, res) {
-      // if(req.Authenticate()){
-      //   res.redirect('/dashboard')
-      // } else {
         res.render('login')
       // }
 
