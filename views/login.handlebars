@@ -1,6 +1,83 @@
+<div class="header-section">
+  <div class='header-flexgrow1'></div>
+  <div class='header-flexgrow2'>
+      <img class="eagle" src="http://www.simpleimageresizer.com/_uploads/photos/d2ecd3ca/eagle_1_50x50.jpg"
+      alt="Eagle logo" />
+      <h1 class="eagle">Freedom Bank</h1>
+  </div>
+    <div class="header-flexgrow1 button-box">
+      <div id='login'>Login</div>
+      <div id='signup'>Sign Up</div>
+    </div>
+</div>
 
+<nav class='nav-bar'>
+  <p class='dropdown'></p>
+  <p class='dropdown'></p>
+  <p class='dropdown'></p>
+  <p class='dropdown'></p>
+</nav>
 
-  <div class='jumbo-container'>
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="5000">
+      <div class="carousel-caption">
+        <div class="form-info">
+          <h3 id="intro">Personal banking made easy with Freedom Bank
+            Sign up or create an Account!
+          </h3>
+        </div>
+        <form>
+          <!-- Form -->
+          <div class="col-md-6">
+
+            {{> login-modal}}
+            {{> signup-modal}}
+{{!-- 
+            <div class='jumbo-login-row'>
+              <div class="login-box">
+                <h10>Log into your Account</h10>
+                <div class="button-box">
+                  <button id='login'>login</button>
+                  <button id='signup'>signup</button>
+                </div>
+
+              </div>
+            </div> --}}
+          </div>
+
+        </form>
+      </div>
+      <img id="slide-c"
+        src="https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU3OTIzNTgwMTQ0MTMzNzc4/how-did-the-bald-eagle-become-americas-national-birds-featured-photo.jpg"
+        class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      <div class="carousel-caption">
+        <h1 class="display-2">The best financial tools to fit your life!</h3>
+
+      </div>
+      <img id="slide-c" src="https://www.thumb.bank/Portals/0/Images/Box-P-Online-Banking.jpg" class="d-block w-100"
+        alt="...">
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      <div class="carousel-caption">
+        <h1 class="display-2">Extra security, Savings, & Rewards with MAXMONEY</h3>
+      </div>
+      <img id="slide-c" src="https://beyondexclamation.com/wp-content/uploads/2019/07/Banking-Security.jpg"
+        class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  {{!-- <div class='jumbo-container'>
     
     {{> login-modal}}
     {{> signup-modal}}
@@ -17,36 +94,104 @@
         </div>
       </div>
   </div>
-</div>  
+</div>   --}}
 
   <div class="container2">
 
-        <div class="ul-boxs">
-          <div id='credit-card' class="box1 display-li">Find a credit card</div>
-          <div id='manage-money'class="box2 display-li">Manage your money</div>
-          <div id='buy-home'class="box2 display-li">Buy a home</div>
-          <div id='buy-car' class="box2 display-li">Buy a car</div>
-          <div id='buy-equity' class="box2 display-li">Use your equity</div>
-        </div>
+  <div class="ul-boxs">
+    <div id='credit-card' class="box1 display-li">Find a credit card</div>
+    <div id='manage-money' class="box2 display-li">Manage your money</div>
+    <div id='buy-home' class="box2 display-li">Buy a home</div>
+    <div id='buy-car' class="box2 display-li">Buy a car</div>
+    <div id='invest' class="box2 display-li">Investments</div>
+  </div>
 
-        <div class='container2-content'>
-            <div id='credit-card-box'>
-              credit-card-box
-            </div>
-            <div id='manage-money-box'>
-              manage-money-box
-            </div>
-            <div id='buy-home-box'>
-              buyhone
-            </div>
-            <div id='buy-car-box'>
-              asdofin
-            </div>
-            <div id='buy-equity-box'>
-              equity
-            </div>
+  <div class='container2-content'>
+    <div id='credit-card-box'>
+      <div class="card-info">
+        <div class="card-text">
+          <p> A card that matches you</p>
         </div>
+      </div>
+      <div class="card-img-box">
+        <div class="info-box">
+          <p class="blue-text">Travel perks, cash back, low rates with a U.S. Bank credit card.</p>
+        </div>
+        <div class="card-img">
+          <div class="card-logo">
+            <div class="freedom-bank-logo">FreedomBank</div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div id='manage-money-box'>
+      <div class="money-info">
+        <div class="money-text">
+          <p>Checking your way</p>
+        </div>
+      </div>
+      <div class="money-img-box">
+        <div class="money-box">
+          <p class="blue-text">What do you want in a checking account?</p>
+        </div>
+        <div class="money-img">
+          <div class="money-logo">
+            <div class="money-bank-logo">FreedomBank</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='buy-home-box'>
+      <div class="home-info">
+        <div class="home-text">
+          <p>Find your new home.</p>
+        </div>
+      </div>
+      <div class="home-img-box">
+        <div class="home-box">
+          <p class="blue-text">Resources and expertise to help you make that house your home.</p>
+        </div>
+        <div class="home-img">
+          <div class="home-logo">
+            <div class="home-bank-logo">FreedomBank</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='buy-car-box'>
+      <div class="car-info">
+        <div class="car-text">
+          <p>Hit the highway</p>
+        </div>
+      </div>
+      <div class="car-img-box">
+        <div class="car-box">
+          <p class="blue-text">Competitive rates for new cars, used cars, and loan refinancing.</p>
+        </div>
+        <div class="car-img">
+          <div class="car-logo">
+            <div class="car-bank-logo">FreedomBank</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='invest-box'>
+      <div class="invest-info">
+        <div class="invest-text">
+          <p>Explore your options</p>
+        </div>
+      </div>
+      <div class="invest-img-box">
+        <div class="invest-box">
+          <p class="blue-text">How to invest, and what stocks should you buy?</p>
+        </div>
+        <div class="invest-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 
   {{> footer }}
