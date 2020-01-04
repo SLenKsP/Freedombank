@@ -238,7 +238,7 @@ body{
 .car-text,
 .invest-text {
   color: rgb(8, 8, 139);
-  width: 60%;
+  width: 50%;
   float: left;
 }
 
@@ -250,25 +250,22 @@ body{
   display: flex;
   height: 350px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .info-box, 
 .money-box,
 .home-box,
-.car-box,
-.invest-box {
+.car-box {
   display: flex;
-  display: inline-block;
   font-size: 30px;
   font-style: italic;
   height: 100px;
-  width: 500px;
-  margin-top: 65px;
+  width: 100%;
+  margin-top: 25px;
 }
 
 .card-img {
+  background-repeat: no-repeat;
   display: flex;
   height: 225px;
   width: 225px;
@@ -276,15 +273,15 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 45, 3);
   background-image: url("../images/images.jpg");
-  margin-top: -100px;
-  margin-left: 100px;
+  margin-top: -70px;
+  margin-left: 200px;
 }
 
 .card-logo {
   display: flex;
   height: 19px;
   width: 19px;
-  margin: 116px 83px 80px 38px;
+  margin: 118px 83px 78px 38px;
   border-radius: 5px;
   background-image: url("../images/d20f0c2a-adf1-458c-94bb-df772ae0cfce_19x19.jpg");
   border: 2px solid rgb(184, 45, 3);
@@ -293,33 +290,35 @@ body{
 .freedom-bank-logo {
   display: flex;
   font-size: 19px;
-  padding-left: 22px;
+  margin-top: -5px;
+  padding-left: 18px;
   color: white;
 }
 
 .money-img {
   display: flex;
   height: 250px;
-  width: 250px;
+  width: 350px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 45, 3);
   background-image: url("../images/images-1.jpg");
-  border-radius: 120px;
-  margin-top: -130px;
+  border-radius: 50px;
+  margin-top: -190px;
   margin-left: 100px;
 } 
 
 .money-bank-logo {
-  margin-left: 21px;
+  margin-top: -7px;
+  margin-left: 18px;
 }
 
 .money-logo {
   display: flex;
   height: 19px;
   width: 19px;
-  margin-top: 200px;
-  margin-left: 60px;
+  margin-top: 210px;
+  margin-left: 50px;
   border-radius: 5px;
   background-image: url("../images/d20f0c2a-adf1-458c-94bb-df772ae0cfce_19x19.jpg");
   border: 2px solid rgb(184, 45, 3);
@@ -328,7 +327,8 @@ body{
 
 /* buy a home styling */
 .home-bank-logo {
-  margin-left: 21px;
+  margin-left: 16px;
+  margin-top: -7px;
 }
 
 .home-img {
@@ -339,7 +339,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 45, 3);
   background-image: url("../images/download.png");
-  margin-top: -100px;
+  margin-top: -115px;
   margin-left: 100px;
 } 
 
@@ -357,7 +357,8 @@ body{
 
 /* Buy a car styling */
 .car-bank-logo {
-  margin-left: 21px;
+  margin-top: -7px;
+  margin-left: 16px;
 }
 
 .car-img {
@@ -385,21 +386,27 @@ body{
 }
 
 /* invest styling */
-.invest-bank-logo {
-  margin-left: 21px;
-}
 
 .invest-img {
   display: flex;
-  height: 280px;
+  height: 300px;
   width: 350px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(184, 45, 3);
   background-image: url("../images/1_400x350.jpg");
-  margin-top: -160px;
-  margin-left: 100px;
+  margin-top: -210px;
+  margin-left: 50px;
   border-radius: 15px;
+}
+
+.invest-box {
+  display: flex;
+  font-size: 30px;
+  font-style: italic;
+  height: 100px;
+  width: 100%;
+  margin-top: 50px;
 }
 /*----------Footer styling ------------*/
 
