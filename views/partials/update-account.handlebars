@@ -1,0 +1,30 @@
+<div class="edit-container">
+    <h1>Account Information</h1>
+    <hr>
+    <div class="account-info">
+        <h1>First Name: <span id="firstName">{{user.first_name}}</span></h1>
+        <h1>Last Name: <span id="lastName">{{user.last_name}}</span></h1>
+        <h1>Email Address: <span id="account-email"></span>{{user.email}}</h1>
+        <h1>Postal Address: <span id="address">{{user.address}}</span></h1>
+    </div>
+    <div class="edit-info">
+        <form >
+            <div>
+                <label>First Name:</label>
+                <input class='account-input' name='first_name'id= "edit-firstName" value="{{user.first_name}}">
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input class='account-input' name='last_name' id= "edit-lastName" value="{{user.last_name}}">
+            </div>
+            <h1>Email Address: <span id="affected-email" value= "{{user.email}}">{{user.email}}</span></h1>
+            <div>
+                <label>Address:</label>
+                <input class='account-input' id="edit-address" name='address' value="{{user.address}}">
+            </div>
+        </form>
+    </div>
+    <button type="submit " class="account-edit-button">Edit</button>
+    <button type="submit" id="save-changes">Save Changes</button>
+    <button type="submit" id="cancel-editing">Cancel</button>
+</div>
