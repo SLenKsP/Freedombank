@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "dirtyllama",
     "database": "freedombank_db",
     "host": "localhost",
     "dialect": "mysql"
