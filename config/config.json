@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "dirtyllama",
     "database": "freedombank_db",
     "host": "localhost",
     "dialect": "mysql"
@@ -10,10 +10,12 @@
     "username": "root",
     "password": null,
     "database": "testdb",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
   },
   "production": {
-    "use_env_variable": "PLACE_DB_ENV_HERE"
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }

@@ -1,35 +1,45 @@
-const Router = require("express").Router;
-const db = require("../models");
+const db = require("../models")
+const passport = require('passport')
 
-const htmlRoutes = new Router();
 
-htmlRoutes.get("/", async (req, res) => {
-  const dbExamples = await db.Example.findAll({});
+  module.exports = app => {
+    //home page
+    app.get("/", function(req, res) {
+      // if(req.Authenticate()){
+      //   res.redirect('/dashboard')
+      // } else {
+        res.render('login')
+      // }
 
-  res.render("index", {
-    msg: "Welcome!",
-    examples: dbExamples
-  });
-});
+    });
+    //account dashbord when logged in
+    app.get('/dashboard', function(req,res){
+      if(req.user){
+        db.Account.findOne({
+          where: {
+            userId: req.user
+          }
+        }).then(function(data){
+          console.log(data)
+          res.render('dashboard', {user: data})
+        })
+      } else {
+        res.redirect('/')
+      }
+    })
 
-// Load example page and pass in an example by id
-htmlRoutes.get("/example/:id", async (req, res) => {
-  const options = {
-    where: {
-      id: req.params.id
-    }
-  };
+    //redirects when going to unknown route
+    app.get("*", function(req, res) {
+      res.redirect("/");
+    }); 
+  }
 
-  const dbExample = await db.Example.findOne(options);
+function isLoggedIn(req, res, next) {
+ 
+  if (req.isAuthenticated())
+   
+      return next();
+       
+  res.redirect('/404');
 
-  res.render("example", {
-    example: dbExample
-  });
-});
-
-// Render 404 page for any unmatched routes
-htmlRoutes.get("*", async (req, res) => {
-  res.render("404");
-});
-
-module.exports = htmlRoutes;
+}
