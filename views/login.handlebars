@@ -1,6 +1,83 @@
+<div class="header-section">
+  <div class='header-flexgrow1'></div>
+  <div class='header-flexgrow2'>
+      <img class="eagle" src="http://www.simpleimageresizer.com/_uploads/photos/d2ecd3ca/eagle_1_50x50.jpg"
+      alt="Eagle logo" />
+      <h1 class="eagle">Freedom Bank</h1>
+  </div>
+    <div class="header-flexgrow1 button-box">
+      <div id='login'>Login</div>
+      <div id='signup'>Sign Up</div>
+    </div>
+</div>
 
+<nav class='nav-bar'>
+  <p class='dropdown'></p>
+  <p class='dropdown'></p>
+  <p class='dropdown'></p>
+  <p class='dropdown'></p>
+</nav>
 
-  <div class='jumbo-container'>
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="5000">
+      <div class="carousel-caption">
+        <div class="form-info">
+          <h3 id="intro">Personal banking made easy with Freedom Bank
+            Sign up or create an Account!
+          </h3>
+        </div>
+        <form>
+          <!-- Form -->
+          <div class="col-md-6">
+
+            {{> login-modal}}
+            {{> signup-modal}}
+{{!-- 
+            <div class='jumbo-login-row'>
+              <div class="login-box">
+                <h10>Log into your Account</h10>
+                <div class="button-box">
+                  <button id='login'>login</button>
+                  <button id='signup'>signup</button>
+                </div>
+
+              </div>
+            </div> --}}
+          </div>
+
+        </form>
+      </div>
+      <img id="slide-c"
+        src="https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU3OTIzNTgwMTQ0MTMzNzc4/how-did-the-bald-eagle-become-americas-national-birds-featured-photo.jpg"
+        class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      <div class="carousel-caption">
+        <h1 class="display-2">The best financial tools to fit your life!</h3>
+
+      </div>
+      <img id="slide-c" src="https://www.thumb.bank/Portals/0/Images/Box-P-Online-Banking.jpg" class="d-block w-100"
+        alt="...">
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      <div class="carousel-caption">
+        <h1 class="display-2">Extra security, Savings, & Rewards with MAXMONEY</h3>
+      </div>
+      <img id="slide-c" src="https://beyondexclamation.com/wp-content/uploads/2019/07/Banking-Security.jpg"
+        class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  {{!-- <div class='jumbo-container'>
     
     {{> login-modal}}
     {{> signup-modal}}
@@ -17,7 +94,7 @@
         </div>
       </div>
   </div>
-</div>  
+</div>   --}}
 
   <div class="container2">
 
