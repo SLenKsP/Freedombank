@@ -3,13 +3,21 @@ $('#nav-account').on('click',function(){
     $('.loans').hide();
     $('.update-account').hide();
     $('.account').show();
+    $('.deposit').hide();
 })
-
+$('#nav-deposit').on('click',function(){
+    $('.deposit').show();
+    $(".send-money").hide();
+    $('.loans').hide();
+    $('.update-account').hide();
+    $('.account').hide();
+})
 $('#nav-send-money').on('click',function(){
     $('.account').hide();
     $('.loans').hide();
     $('.update-account').hide();
     $('.send-money').show();
+    $('.deposit').hide();
 })
 
 $('#nav-loans').on("click",function(){
@@ -17,6 +25,7 @@ $('#nav-loans').on("click",function(){
     $('.update-account').hide();
     $('.send-money').hide();
     $('.loans').show();
+    $('.deposit').hide();
 })
 
 $('#nav-update-account').on('click',function(){
@@ -24,6 +33,7 @@ $('#nav-update-account').on('click',function(){
     $('.loans').hide();
     $('.send-money').hide();
     $('.update-account').show();
+    $('.deposit').hide();
 })
 
 $('#send-money-button').on('click',function(){

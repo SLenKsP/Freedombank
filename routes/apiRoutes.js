@@ -62,6 +62,27 @@ module.exports = app => {
         )
       })
     })
+    //make a deposit
+    app.post('/api/deposit',function(req,res){
+      db.Account.findOne({
+        where: {
+          UserId: req.user
+        }
+      }).then(function(data){
+        let transactionData = {
+          account_id: data.id,
+          transaction_type: 'Deposit',
+          comment: 'Deposit',
+          amount: parseInt(req.body.deposit)
+        }
+        let updatedValues = {current_balance:(parseInt(data.current_balance) + parseInt(req.body.deposit))}
+        let location = {where: {UserId:req.user}}
+        db.Account.update(updatedValues, location).then()
+        db.transactions.create(transactionData).then(
+          res.redirect('/dashboard')
+        );
+      })
+    })
     //logs you out
     app.get(`/logout`, (req, res) => {
       req.logout();
