@@ -22,28 +22,61 @@ $('.display-li').on('click',function(){
   $('#manage-money').removeClass('box1')
   $('#buy-home').removeClass('box1')
   $('#buy-car').removeClass('box1')
-  $('#buy-equity').removeClass('box1')
+  $('#invest').removeClass('box1')
 })
 
 $("#credit-card").on("click", function() {
   event.preventDefault();
-  $("#credit-card-box").show();
+  $("#credit-card-box").hide().fadeIn(300);
   $('#manage-money-box').hide();
   $('#buy-home-box').hide();
   $('#buy-car-box').hide();
-  $('#buy-equity-box').hide();
+  $('#invest-box').hide();
 
   $('#credit-card').addClass('box1')
 });
 $("#manage-money").on("click", function() {
   event.preventDefault();
   $("#credit-card-box").hide();
-  $('#manage-money-box').show();
+  $('#manage-money-box').hide().fadeIn(300);
   $('#buy-home-box').hide();
   $('#buy-car-box').hide();
-  $('#buy-equity-box').hide();
+  $('#invest-box').hide();
 
-  $('#manage-money').addClass('box1')
+  $('#manage-money').addClass('box1');
+});
+
+$("#buy-home").on("click", function() {
+  event.preventDefault();
+  $("#credit-card-box").hide().fadeOut(500);
+  $('#manage-money-box').hide().fadeOut(500);
+  $('#buy-home-box').hide().fadeIn(500);
+  $('#buy-car-box').hide().fadeOut(500);
+  $('#invest-box').hide().fadeOut(500);
+
+  $('#buy-home').addClass('box1');
+});
+
+$("#buy-car").on("click", function() {
+  event.preventDefault();
+  $("#credit-card-box").hide().fadeOut(500);
+  $('#manage-money-box').hide().fadeOut(500);
+  $('#buy-home-box').hide().fadeOut(500);
+  $('#buy-car-box').hide().fadeIn(500);
+  $('#invest-box').hide().fadeOut(500);
+
+  $('#buy-car').addClass('box1');
+});
+
+$("#invest").on("click", function() {
+  event.preventDefault();
+  $("#credit-card-box").hide().fadeOut(500);
+  $('#manage-money-box').hide().fadeOut(500);
+  $('#buy-home-box').hide().fadeOut(500);
+  $('#buy-car-box').hide().fadeOut(500);
+  $('#invest-box').hide().fadeIn(500);
+
+  $('#invest').addClass('box1');
 });
 
 //buttons on the modal
