@@ -327,3 +327,8 @@ hr {
 .modal-send-money-box{
   text-align: center;
 }
+
+/* Update account page */
+.edit-info, #save-changes, #cancel-editing{
+  display: none;
+}
