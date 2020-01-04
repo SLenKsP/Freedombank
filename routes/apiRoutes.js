@@ -83,6 +83,27 @@ module.exports = app => {
         );
       })
     })
+    //update account
+    app.put("/api/updateaccount", function(req, res) {
+      console.log(`Editing name: ${req.body.first_name}`);
+      db.account
+        .update(
+          {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            address: req.body.address
+          },
+          {
+            where: {
+              email: req.body.email
+            }
+          }
+        )
+        .then((result) => {
+          res.json(result);
+          console.log(result);
+        });
+    });
     //logs you out
     app.get(`/logout`, (req, res) => {
       req.logout();

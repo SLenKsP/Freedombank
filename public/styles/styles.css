@@ -745,6 +745,17 @@ footer a {
   height: 200px;
   margin-bottom: -300px;
   font-size: 30px;
-
   font-style: italic;
+}
+
+.account-container{
+  background-color:white;  
+  height:500px;
+  display:flex;
+  flex-direction: column;
+  width:800px;
+}
+
+.edit-info, #save-changes, #cancel-editing{
+  display: none;
 }
